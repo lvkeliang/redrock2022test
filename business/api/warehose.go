@@ -30,7 +30,7 @@ func addWarehose(c *gin.Context) {
 		return
 	}
 
-	err = service.CreateWarehose(model.User{
+	err = service.CreateWarehose(model.Warehose{
 		WarehoseName: warehoseName,
 	})
 
