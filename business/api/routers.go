@@ -14,11 +14,12 @@ func InitRouter() {
 		u.POST("/login", Login)
 	}
 
-	wa := r.Group("/addwarehose", addWarehose)
+	wa := r.Group("/addwarehose", AddWarehose)
 	{
-		wa.POST("/new")
-		wa.PUT("/alterationgoods")
-		wa.PUT("/inventory")
-		wa.PUT("/deploy")
+		wa.PUT("/alterationgoods/add", Addgoods)
+		wa.PUT("/alterationgoods/off", OffShelveGoods)
+		wa.PUT("/inventory/in", InventoryIn)
+		wa.PUT("/inventory/off", InventoryOff)
+		wa.PUT("/deploy", Deploy)
 	}
 }

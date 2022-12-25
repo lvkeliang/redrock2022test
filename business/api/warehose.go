@@ -10,7 +10,7 @@ import (
 	"redrock2022test/business/util"
 )
 
-func addWarehose(c *gin.Context) {
+func AddWarehose(c *gin.Context) {
 	warehoseName := c.PostForm("name")
 	if warehoseName == "" {
 		fmt.Println("输入空字符")
